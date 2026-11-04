@@ -1,0 +1,304 @@
+.map-streets {
+  pointer-events: none;
+}
+
+.map-preview {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 20px #0002;
+}
+
+.map-preview-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.map-preview-info b,
+.map-preview-info > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.map-preview-info > span {
+  color: var(--muted);
+}
+
+.map-preview .rating {
+  margin: 2px 0;
+  font-size: 11px;
+}
+
+.map-preview .primary {
+  min-height: 44px;
+  margin: 0;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.tracking-summary {
+  align-items: flex-start;
+}
+
+.tracking-summary > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.tracking-summary p {
+  overflow-wrap: anywhere;
+}
+
+.tracking-support {
+  margin-top: 10px;
+}
+
+.demo-caption {
+  margin: -4px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.availability-list .agenda-blocked {
+  color: #8a4b11;
+  background: #fffaf4;
+}
+
+.availability-list .agenda-blocked button {
+  color: #8a4b11;
+}
+
+.availability-list .agenda-appointment em {
+  grid-column: 2 / -1;
+}
+
+@media (max-width: 720px) {
+  .availability {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .availability > span:nth-child(2) {
+    flex: 1;
+  }
+
+  .availability button {
+    min-height: 44px;
+    padding: 8px 10px;
+  }
+
+  .availability.unavailable {
+    background: #fff3e8;
+    color: #8a4b11;
+  }
+
+  .availability.unavailable .online-dot {
+    background: #d97706;
+  }
+
+  .topbar .brand,
+  .role-switch button,
+  .back,
+  .discover-tools > button,
+  .segment button,
+  .sort-row button,
+  .heart,
+  .card-bottom button,
+  .day-tabs button,
+  .slots button,
+  .booking-tabs button,
+  .bottom-nav button,
+  .map-pin,
+  .sheet-title button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .role-switch {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .page {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .has-bottom-nav .page {
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+
+  .sticky-action {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    min-height: 48px;
+  }
+
+  .has-bottom-nav .sticky-action {
+    bottom: calc(73px + env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav {
+    height: calc(63px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .bottom-nav button {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .bottom-nav button.active {
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  .bottom-nav button.active svg {
+    color: var(--green);
+  }
+
+  .sort-row {
+    scrollbar-width: none;
+    padding-bottom: 3px;
+  }
+
+  .sort-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .barber-card,
+  .booking-card,
+  .request {
+    border-radius: 16px;
+  }
+
+  .tracking-summary {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .agenda-week {
+    grid-template-columns: repeat(6, minmax(48px, 1fr));
+    gap: 6px;
+    overflow-x: auto;
+    padding: 2px 1px 8px;
+    scrollbar-width: none;
+  }
+
+  .agenda-week::-webkit-scrollbar {
+    display: none;
+  }
+
+  .agenda-week button {
+    min-height: 56px;
+    min-width: 48px;
+  }
+
+  .availability-list > span {
+    grid-template-columns: 54px minmax(0, 1fr) auto;
+    gap: 6px;
+    min-height: 56px;
+    font-size: 12px;
+  }
+
+  .availability-list > span button {
+    min-height: 44px;
+    padding: 6px;
+  }
+
+  .agenda-add-block {
+    width: 100%;
+  }
+
+  .tracking-summary .avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .timeline {
+    margin-bottom: 20px;
+  }
+
+  .filter-sheet {
+    max-height: min(85dvh, 680px);
+    overflow-y: auto;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .filter-sheet input[type="range"] {
+    min-height: 44px;
+  }
+
+  .map-demo {
+    height: calc(100dvh - 300px);
+    min-height: 380px;
+  }
+
+  .map-pin.selected {
+    background: var(--green);
+    box-shadow: 0 0 0 5px #16a34a30, 0 3px 8px #0003;
+  }
+
+  .radius-control {
+    padding: 16px;
+  }
+
+  .radius-control > div:first-child {
+    padding-right: 0;
+  }
+
+  .radius-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 14px 0 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .radius-value input {
+    width: 82px;
+    min-height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--ink);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .radius-control input[type="range"] {
+    min-height: 44px;
+  }
+
+  .filter-sheet .primary,
+  .secondary,
+  .primary {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
